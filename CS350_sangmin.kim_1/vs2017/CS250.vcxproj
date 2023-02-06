@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7ABC44A1-16E8-48A2-A0C0-719102F4E2F9}</ProjectGuid>
+    <RootNamespace>CS250</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CS300</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..;..\third_party;..\third_party\Imgui;..\third_party\GLFW;..\Sources;..\third_party\assimp;..\third_party\assimp\64;..\third_party\assimp\include\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/wd5105 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4819;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;SDL2.lib;SDL2main.lib;glfw3.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Opengl32.lib;Gdi32.lib;User32.lib;cudart.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../third_party/x64;../third_party/assimp/64</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "..\third_party\x64\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>%(CodeGeneration)</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..;..\third_party;..\third_party\Imgui;..\third_party\GLFW;..\Sources;..\third_party\assimp;..\third_party\assimp\64;..\third_party\assimp\include\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/wd5105 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4819;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;SDL2.lib;SDL2main.lib;glfw3.lib;assimp.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../third_party/x64;../third_party/assimp/64</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "..\third_party\x64\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Affine.cpp" />
+    <ClCompile Include="..\Sources\As1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\BinaryFileManager.cpp" />
+    <ClCompile Include="..\Sources\Camera.cpp" />
+    <ClCompile Include="..\Sources\CameraManager.cpp" />
+    <ClCompile Include="..\Sources\Client.cpp" />
+    <ClCompile Include="..\Sources\CubeMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\cubeTexture.cpp" />
+    <ClCompile Include="..\Sources\CudaMemoryManager.cpp" />
+    <ClCompile Include="..\Sources\DefferedRendering.cpp" />
+    <ClCompile Include="..\Sources\DrawingManager.cpp" />
+    <ClCompile Include="..\Sources\FluidCompute.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FluidGrid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FrameBuffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FrameBufferTexturing.cpp" />
+    <ClCompile Include="..\Sources\GBuffer.cpp" />
+    <ClCompile Include="..\Sources\glmCamera.cpp" />
+    <ClCompile Include="..\Sources\Graphic.cpp" />
+    <ClCompile Include="..\Sources\Ground.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Heart_Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Heart_ShadowMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Image.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\InputManager.cpp" />
+    <ClCompile Include="..\Sources\Level1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level10.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level11.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level5.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level6.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level7.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level8.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level9.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Light_Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\LoadedObj.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\loadTga.cpp" />
+    <ClCompile Include="..\Sources\main.cpp" />
+    <ClCompile Include="..\Sources\Mesh.cpp" />
+    <ClCompile Include="..\Sources\Mesh_Object.cpp" />
+    <ClCompile Include="..\Sources\Object.cpp" />
+    <ClCompile Include="..\Sources\Object_ExceptShadow.cpp" />
+    <ClCompile Include="..\Sources\ObjLoad.cpp" />
+    <ClCompile Include="..\Sources\OutLine.cpp" />
+    <ClCompile Include="..\Sources\Particle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\PositionConverter.cpp" />
+    <ClCompile Include="..\Sources\PPMReader.cpp" />
+    <ClCompile Include="..\Sources\Projection.cpp" />
+    <ClCompile Include="..\Sources\RandomNumGenerator.cpp" />
+    <ClCompile Include="..\Sources\RaycastManager.cpp" />
+    <ClCompile Include="..\Sources\readAssimpFile.cpp" />
+    <ClCompile Include="..\Sources\Shader.cpp" />
+    <ClCompile Include="..\Sources\SimpleCube_Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\SkyBox.cpp" />
+    <ClCompile Include="..\Sources\SnubDodecMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Sphere_mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Square_Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Texture.cpp" />
+    <ClCompile Include="..\Sources\UniformManager.cpp" />
+    <ClCompile Include="..\Sources\VAO.cpp" />
+    <ClCompile Include="..\Sources\Water.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\WaterFrameBuffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\WaterRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_sdl.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\third_party\Imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Affine.h" />
+    <ClInclude Include="..\Sources\As1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\AssimpMeshDatas.hpp" />
+    <ClInclude Include="..\Sources\BinaryFileManager.h" />
+    <ClInclude Include="..\Sources\Buffer.hpp" />
+    <ClInclude Include="..\Sources\BufferT.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Camera.h" />
+    <ClInclude Include="..\Sources\CameraManager.h" />
+    <ClInclude Include="..\Sources\Client.h" />
+    <ClInclude Include="..\Sources\CubeMesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\cubeTexture.h" />
+    <ClInclude Include="..\Sources\CudaBuffer.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\CudaMemoryManager.hpp" />
+    <ClInclude Include="..\Sources\DebugApi.h" />
+    <ClInclude Include="..\Sources\DefferedRendering.h" />
+    <ClInclude Include="..\Sources\DrawingManager.h" />
+    <ClInclude Include="..\Sources\FluidCompute.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FluidGrid.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FluidParticle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FrameBuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FrameBufferTexturing.h" />
+    <ClInclude Include="..\Sources\GBuffer.h" />
+    <ClInclude Include="..\Sources\glmCamera.h" />
+    <ClInclude Include="..\Sources\Graphic.h" />
+    <ClInclude Include="..\Sources\Ground.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Heart_Mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Heart_ShadowMesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Image.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\InputManager.h" />
+    <ClInclude Include="..\Sources\KtxFileLoader.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level10.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level11.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level3.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level4.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level5.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level6.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level7.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level8.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level9.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\LightInfo.h" />
+    <ClInclude Include="..\Sources\Light_Mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\LoadedObj.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\loadTga.h" />
+    <ClInclude Include="..\Sources\Mesh.h" />
+    <ClInclude Include="..\Sources\Mesh_Object.h" />
+    <ClInclude Include="..\Sources\Model.h" />
+    <ClInclude Include="..\Sources\Object.h" />
+    <ClInclude Include="..\Sources\Object_ExceptShadow.h" />
+    <ClInclude Include="..\Sources\ObjLoad.h" />
+    <ClInclude Include="..\Sources\ObjLoader.h" />
+    <ClInclude Include="..\Sources\OutLine.h" />
+    <ClInclude Include="..\Sources\Particle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\ParticleInstance.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\PositionConverter.h" />
+    <ClInclude Include="..\Sources\PPMReader.h" />
+    <ClInclude Include="..\Sources\Projection.h" />
+    <ClInclude Include="..\Sources\RandomNumGenerator.h" />
+    <ClInclude Include="..\Sources\RaycastManager.h" />
+    <ClInclude Include="..\Sources\SandParticle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Shader.h" />
+    <ClInclude Include="..\Sources\Shader_Table.hpp" />
+    <ClInclude Include="..\Sources\SimpleCube_Mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Skybox.h" />
+    <ClInclude Include="..\Sources\SnubDodecMesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Sphere_mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Square_Mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\State.h" />
+    <ClInclude Include="..\Sources\Texture.h" />
+    <ClInclude Include="..\Sources\TgaTexture.h" />
+    <ClInclude Include="..\Sources\UniformManager.h" />
+    <ClInclude Include="..\Sources\VAO.h" />
+    <ClInclude Include="..\Sources\Vertex.h" />
+    <ClInclude Include="..\Sources\vmath.h" />
+    <ClInclude Include="..\Sources\Water.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\WaterFrameBuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Sources\WaterRenderer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imconfig.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_sdl.h" />
+    <ClInclude Include="..\third_party\Imgui\imgui_internal.h" />
+    <ClInclude Include="..\third_party\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\third_party\Imgui\imstb_textedit.h" />
+    <ClInclude Include="..\third_party\Imgui\imstb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Sources\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shaders\BlinnLightingFragment.glsl" />
+    <None Include="..\Shaders\BlinnLightingVertex.glsl" />
+    <None Include="..\Shaders\ComputeShader.glsl" />
+    <None Include="..\Shaders\ComputeShaderBasic.glsl" />
+    <None Include="..\Shaders\ComputeShaderFlocking.glsl" />
+    <None Include="..\Shaders\ComputeShaderFluidNeighbor.glsl" />
+    <None Include="..\Shaders\ComputeShaderPrefix.glsl" />
+    <None Include="..\Shaders\ComputeShaderRaytracing.glsl" />
+    <None Include="..\Shaders\DeferredShadingFragment.glsl" />
+    <None Include="..\Shaders\DeferredShadingVertex.glsl" />
+    <None Include="..\Shaders\DiffuseShader.frag" />
+    <None Include="..\Shaders\DiffuseShader.vert" />
+    <None Include="..\Shaders\FlockingFragmentShader.glsl" />
+    <None Include="..\Shaders\FlockingShaderVertex.glsl" />
+    <None Include="..\Shaders\FluidCompute.glsl" />
+    <None Include="..\Shaders\FluidCompute2.glsl" />
+    <None Include="..\Shaders\FluidFragment.glsl" />
+    <None Include="..\Shaders\FluidFragment2.glsl" />
+    <None Include="..\Shaders\fluidGeometry.glsl" />
+    <None Include="..\Shaders\FluidVertex.glsl" />
+    <None Include="..\Shaders\FluidVertex2.glsl" />
+    <None Include="..\Shaders\Fragmentshader.glsl" />
+    <None Include="..\Shaders\FragmentShaderInstance.glsl" />
+    <None Include="..\Shaders\fragmentShaderNormal.glsl" />
+    <None Include="..\Shaders\Fragmentshader_Texture.glsl" />
+    <None Include="..\Shaders\FrameBufferFragment.glsl" />
+    <None Include="..\Shaders\FrameBufferVertex.glsl" />
+    <None Include="..\Shaders\FSQ.frag" />
+    <None Include="..\Shaders\FSQ.vert" />
+    <None Include="..\Shaders\GBufferFragment.glsl" />
+    <None Include="..\Shaders\GBufferVertex.glsl" />
+    <None Include="..\Shaders\GroundFragment.glsl" />
+    <None Include="..\Shaders\GroundTesselationControl.glsl" />
+    <None Include="..\Shaders\GroundTesselationEvaluation.glsl" />
+    <None Include="..\Shaders\GroundVertex.glsl" />
+    <None Include="..\Shaders\HdrBloomFilterFragment.glsl" />
+    <None Include="..\Shaders\HdrBloomFilterVertex.glsl" />
+    <None Include="..\Shaders\HdrBloomResolveFragment.glsl" />
+    <None Include="..\Shaders\HdrBloomResolveVertex.glsl" />
+    <None Include="..\Shaders\HdrBloomSceneFragment.glsl" />
+    <None Include="..\Shaders\HdrBloomSceneVertex.glsl" />
+    <None Include="..\Shaders\NormalDisplayShader.frag" />
+    <None Include="..\Shaders\NormalDisplayShader.vert" />
+    <None Include="..\Shaders\ParticleCollisionCompute.glsl" />
+    <None Include="..\Shaders\ParticleCollisionFragment.glsl" />
+    <None Include="..\Shaders\ParticleCollisionGeometry.glsl" />
+    <None Include="..\Shaders\ParticleCollisionVertex.glsl" />
+    <None Include="..\Shaders\ParticleColoredFragment.glsl" />
+    <None Include="..\Shaders\ParticleColoredVertex.glsl" />
+    <None Include="..\Shaders\particleComputeShader.glsl" />
+    <None Include="..\Shaders\particleFragmentShader.glsl" />
+    <None Include="..\Shaders\particleGeometry.glsl" />
+    <None Include="..\Shaders\particleVertexShader.glsl" />
+    <None Include="..\Shaders\PhongLightingFragment.glsl" />
+    <None Include="..\Shaders\PhongLightingVertex.glsl" />
+    <None Include="..\Shaders\QuadFragmentShader.frag" />
+    <None Include="..\Shaders\QuadVertexShader.vert" />
+    <None Include="..\Shaders\ShadowFragment.glsl" />
+    <None Include="..\Shaders\ShadowVertex.glsl" />
+    <None Include="..\Shaders\SimpleFragment.glsl" />
+    <None Include="..\Shaders\SimpleFragmentShader.frag" />
+    <None Include="..\Shaders\SimpleVertex.glsl" />
+    <None Include="..\Shaders\SimpleVertexShader.vert" />
+    <None Include="..\Shaders\SingleColorFragmentShader.glsl" />
+    <None Include="..\Shaders\SingleColorVertexShader.glsl" />
+    <None Include="..\Shaders\SkyboxFragment.glsl" />
+    <None Include="..\Shaders\SkyboxVertex.glsl" />
+    <None Include="..\Shaders\traceBlitFragment.glsl" />
+    <None Include="..\Shaders\traceBlitVertex.glsl" />
+    <None Include="..\Shaders\traceFragment.glsl" />
+    <None Include="..\Shaders\tracePrepareFragment.glsl" />
+    <None Include="..\Shaders\tracePrepareVertex.glsl" />
+    <None Include="..\Shaders\traceVertex.glsl" />
+    <None Include="..\Shaders\VertexOnePoint.glsl" />
+    <None Include="..\Shaders\Vertexshader.glsl" />
+    <None Include="..\Shaders\VertexShaderInstance.glsl" />
+    <None Include="..\Shaders\vertexShaderNormal.glsl" />
+    <None Include="..\Shaders\Vertexshader_Texture.glsl" />
+    <None Include="..\Shaders\WaterComputeShader.glsl" />
+    <None Include="..\Shaders\WaterFragment.glsl" />
+    <None Include="..\Shaders\WaterVertex.glsl" />
+    <None Include="..\Sources\Test.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\Sources\Test.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

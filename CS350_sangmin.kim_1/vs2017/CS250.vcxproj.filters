@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\third_party\Imgui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_glfw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_opengl3.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\Imgui\imgui_impl_sdl.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Affine.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\PositionConverter.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\RandomNumGenerator.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level1.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level2.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level3.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level4.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level5.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level6.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level7.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level8.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level9.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level10.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Level11.cpp">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\BinaryFileManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\CameraManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\CudaMemoryManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\DrawingManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\InputManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\RaycastManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\UniformManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Heart_Mesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Heart_ShadowMesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\SimpleCube_Mesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\SnubDodecMesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Sphere_mesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Square_Mesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Mesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Mesh_Object.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\ObjLoad.cpp">
+      <Filter>ObjLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Object.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Object_ExceptShadow.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\CubeMesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FluidCompute.cpp">
+      <Filter>Fluid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FluidGrid.cpp">
+      <Filter>Fluid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Light_Mesh.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\VAO.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\LoadedObj.cpp">
+      <Filter>ObjLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\loadTga.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Ground.cpp">
+      <Filter>Model\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Projection.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Particle.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Client.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Graphic.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\main.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Image.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Shader.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Texture.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FrameBuffer.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\WaterFrameBuffer.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\WaterRenderer.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Water.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\OutLine.cpp">
+      <Filter>other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\SkyBox.cpp">
+      <Filter>other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\As1.cpp">
+      <Filter>CS350As1Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\PPMReader.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\FrameBufferTexturing.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\glmCamera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\cubeTexture.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\DefferedRendering.cpp">
+      <Filter>CS350As1Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GBuffer.cpp">
+      <Filter>FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\readAssimpFile.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cuda">
+      <UniqueIdentifier>{28942be9-feb4-4dff-a1fb-6068e3b3bb3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{4c265c43-e7d5-4f79-be4c-64e3c329d0aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels%28Not for CS300 As%29">
+      <UniqueIdentifier>{4f443a73-53c1-4741-b35a-9227afd23754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{72bd474f-b43b-405f-bdd1-7054a306529d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{7d9353a9-106d-4697-9bda-b6f1213f3091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{6ee355eb-9430-423e-82ff-3a96cecbdca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{14fec833-0d0c-4f77-8c8c-a62ffe7bc559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{9797b01e-97a6-44db-bf4d-edc7e7fffc82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Set">
+      <UniqueIdentifier>{d5c40e95-2527-407e-99d4-1b19a7c29ae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjLoader">
+      <UniqueIdentifier>{d41ddaf1-60d6-487a-b1ee-39cb3bdf5845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fluid">
+      <UniqueIdentifier>{46f534b8-7fe0-4ae5-8a79-85b8c597f82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{cda02c84-7f5d-4391-ba9f-2d8ec33f6e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{6b0b61a4-1524-4896-b2de-fe7adedca7cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameBuffer">
+      <UniqueIdentifier>{2ce982ec-e6bc-43c1-ac57-a9aa7743da66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other">
+      <UniqueIdentifier>{dd6a30ae-023d-4cbd-9a15-777643d7d166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{5649187b-9637-4be1-932d-668d0161a759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\ComputeShader">
+      <UniqueIdentifier>{80c6a2ff-4bf3-4572-a5c2-1a8a04282430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CS350As1Filter">
+      <UniqueIdentifier>{329d9af3-67fa-4906-a481-f7b0ad85d8bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_glfw.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_opengl3.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_opengl3_loader.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\Imgui\imgui_impl_sdl.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Affine.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\PositionConverter.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\RandomNumGenerator.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level1.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level2.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level3.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level4.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level5.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level6.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level7.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level8.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level9.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level10.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Level11.h">
+      <Filter>Levels%28Not for CS300 As%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\BinaryFileManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\CameraManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\CudaMemoryManager.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\DrawingManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\InputManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\RaycastManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\UniformManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Buffer.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\CudaBuffer.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Heart_Mesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Heart_ShadowMesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\SimpleCube_Mesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\SnubDodecMesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Sphere_mesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Square_Mesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Mesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Mesh_Object.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\BufferT.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\ObjLoad.h">
+      <Filter>ObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\ObjLoader.h">
+      <Filter>ObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Object.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Object_ExceptShadow.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\CubeMesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FluidCompute.h">
+      <Filter>Fluid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FluidGrid.h">
+      <Filter>Fluid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FluidParticle.h">
+      <Filter>Fluid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Light_Mesh.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\VAO.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\LoadedObj.h">
+      <Filter>ObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\loadTga.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Ground.h">
+      <Filter>Model\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Projection.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Particle.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\ParticleInstance.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\SandParticle.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Client.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Graphic.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Image.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\KtxFileLoader.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Shader.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Shader_Table.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Texture.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\TgaTexture.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\State.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FrameBuffer.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\WaterFrameBuffer.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\WaterRenderer.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Water.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\DebugApi.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\OutLine.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Skybox.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Vertex.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\vmath.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\As1.h">
+      <Filter>CS350As1Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\LightInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\PPMReader.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\FrameBufferTexturing.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\glmCamera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\cubeTexture.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\DefferedRendering.h">
+      <Filter>CS350As1Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GBuffer.h">
+      <Filter>FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\AssimpMeshDatas.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Sources\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shaders\SingleColorVertexShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SkyboxFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SkyboxVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\traceBlitFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\traceBlitVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\traceFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\tracePrepareFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\tracePrepareVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\traceVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\VertexOnePoint.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\Vertexshader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\Vertexshader_Texture.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\VertexShaderInstance.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\WaterComputeShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\WaterFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\WaterVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\DiffuseShader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\DiffuseShader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FlockingFragmentShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FlockingShaderVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidCompute.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidCompute2.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidFragment2.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\fluidGeometry.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FluidVertex2.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\Fragmentshader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\Fragmentshader_Texture.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FragmentShaderInstance.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FrameBufferFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FrameBufferVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FSQ.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\FSQ.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GroundFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GroundTesselationControl.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GroundTesselationEvaluation.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GroundVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomFilterFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomFilterVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomResolveFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomResolveVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomSceneFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\HdrBloomSceneVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\NormalDisplayShader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\NormalDisplayShader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleCollisionCompute.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleCollisionFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleCollisionGeometry.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleCollisionVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleColoredFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ParticleColoredVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\particleComputeShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\particleFragmentShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\particleGeometry.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\particleVertexShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\QuadFragmentShader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\QuadVertexShader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ShadowFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\ShadowVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SimpleFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SimpleFragmentShader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SimpleVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SimpleVertexShader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\SingleColorFragmentShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Sources\Test.cuh">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\Sources\Test.cu">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShader.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShaderBasic.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShaderFlocking.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShaderFluidNeighbor.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShaderPrefix.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\ComputeShaderRaytracing.glsl">
+      <Filter>Shaders\ComputeShader</Filter>
+    </None>
+    <None Include="..\Shaders\BlinnLightingFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\BlinnLightingVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\PhongLightingFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\PhongLightingVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GBufferFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\GBufferVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\DeferredShadingVertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\DeferredShadingFragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\vertexShaderNormal.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Shaders\fragmentShaderNormal.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
