@@ -52,6 +52,4 @@ void readImage(std::string fname, std::vector<Color_Val>& colorVec, int& width, 
         colorVec.push_back(colorVal);
 
     }
-    const int a = 0;
-
 }
